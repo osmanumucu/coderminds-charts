@@ -1,0 +1,80 @@
+h1 {
+    color: rgb(26,176,219);
+    font-family: "Jersey 25", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+section > div:nth-child(1) {
+    background-color: #1AB0DC;
+}
+
+section > div:nth-child(3) {
+    background-color: #A11051;
+}
+
+.QuestionToggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content {
+    color: #666;
+    max-height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    padding: 0 20px;
+    opacity: 0;
+    transition: 0.5s;
+    width: 100%;
+}
+
+label {
+    cursor: pointer;
+    display: block;
+    padding: 10px 20px;
+    margin: 0;
+    color: rgb(0, 0, 0);
+    position: relative;
+    font-size: 15px;
+    width: 100%;
+}
+
+label::after {
+    content: "\271B";
+    position: absolute;
+    right: 15px;
+    color: white;
+    opacity: 0.5;
+    font-weight: 100;
+    font-size: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked + label + .content {
+    max-height: 100vh;
+    visibility: visible;
+    opacity: 1;
+    padding: 20px;
+}
+
+input[type="checkbox"]:checked + label::after {
+    content: "\268A";
+}
