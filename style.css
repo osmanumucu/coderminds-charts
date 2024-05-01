@@ -146,9 +146,20 @@ input[type="checkbox"]:checked + label::after {
 }
 
 @keyframes slide-in {
-    from {right: -100px; opacity: 0; transform: rotate(0deg);}
-    to {right: 150px; opacity: 1; transform: rotate(360deg)}
+    from {
+        right: -100px;
+        opacity: 0;
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg); /* Prefix for Safari and older Chrome browsers */
+    }
+    to {
+        right: 150px;
+        opacity: 1;
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg); /* Prefix for Safari and older Chrome browsers */
+    }
 }
+
 
 .navigation {
     display: flex;
