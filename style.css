@@ -151,6 +151,7 @@ input[type="checkbox"]:checked + label::after {
     to {right: 150px; opacity: 1; transform: rotate(360deg)}
 }
 
+
 .navigation {
     display: flex;
     flex-direction: row;
