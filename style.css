@@ -17,27 +17,42 @@ body {
 
 .RightSideImage {
     position: absolute;
-    width: 160px;
+    width: 100px;
     right: -170px;
     top: -5%;
     animation-name: slide-in;
     animation-fill-mode: forwards;
-    animation-duration: 1s; /* Adjust the duration as needed */
-    animation-delay: 0s; /* Adjust the delay as needed */
-    opacity: 0; /* Ensure the element is initially hidden */
-    animation-play-state: paused; /* Initially pause the animation */
+    animation-duration: 1s;
+    animation-delay: 0s;
+    opacity: 0;
+    animation-play-state: paused;
 }
 
 @keyframes slide-in {
     from {
-        right: -100px;
+        right: -80px;
         opacity: 0;
-        transform: rotate(0deg);
     }
     to {
         right: 150px;
         opacity: 1;
-        transform: rotate(360deg);
+    }
+}
+
+@media (min-width: 992px) {
+    @keyframes slide-in {
+        from {
+            right: -100px;
+            opacity: 0;
+        }
+        to {
+            right: 150px;
+            opacity: 1;
+        }
+    }
+
+    .RightSideImage {
+        width: 160px;
     }
 }
 
