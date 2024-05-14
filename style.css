@@ -15,6 +15,33 @@ body {
     to {top: 150px; opacity: 1;}
 }
 
+.RightSideImage {
+    position: absolute;
+    width: 160px;
+    right: -170px;
+    top: -5%;
+    animation-name: slide-in;
+    animation-fill-mode: forwards;
+    animation-duration: 1s; /* Adjust the duration as needed */
+    animation-delay: 0s; /* Adjust the delay as needed */
+    opacity: 0; /* Ensure the element is initially hidden */
+    animation-play-state: paused; /* Initially pause the animation */
+}
+
+@keyframes slide-in {
+    from {
+        right: -100px;
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+    to {
+        right: 150px;
+        opacity: 1;
+        transform: rotate(360deg);
+    }
+}
+
+
 h1 {
     color: #1ab0db;
     font-family: "Jersey 25", sans-serif;
@@ -23,28 +50,11 @@ h1 {
     animation-name: load;
     animation-timeline: view();
     animation-fill-mode: forwards;
-    animation-duration: 1s;
 }
 
 @keyframes load {
     from {opacity: 0;}
     to {opacity: 1;}
-}
-
-.RightSideImage {
-    position: absolute;
-    width: 160px;
-    right: -170px;
-    top: -5%;
-    animation-name: slide-in;
-    animation-timeline: view();
-    animation-fill-mode: forwards;
-    animation-duration: 1s;
-}
-
-@keyframes slide-in {
-    from {right: -100px; opacity: 0;}
-    to {right: 150px; opacity: 1;}
 }
 
 p {
@@ -75,6 +85,7 @@ p {
     justify-content: center;
     align-items: center;
 }
+
 
 section {
     position: relative;
