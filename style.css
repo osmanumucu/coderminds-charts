@@ -2,6 +2,61 @@ body {
     overflow-x: hidden;
 }
 
+#mainSection > div > img {
+    position: absolute;
+    height: 20%;
+    animation-name: fade-in;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+    from {top: -100px; opacity: 0;}
+    to {top: 150px; opacity: 1;}
+}
+
+.RightSideImage {
+    position: absolute;
+    width: 100px;
+    right: -170px;
+    top: -5%;
+    animation-name: slide-in;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    opacity: 0;
+    animation-play-state: paused;
+}
+
+@keyframes slide-in {
+    from {
+        right: -80px;
+        opacity: 0;
+    }
+    to {
+        right: 150px;
+        opacity: 1;
+    }
+}
+
+@media (min-width: 992px) {
+    @keyframes slide-in {
+        from {
+            right: -100px;
+            opacity: 0;
+        }
+        to {
+            right: 150px;
+            opacity: 1;
+        }
+    }
+
+    .RightSideImage {
+        width: 160px;
+    }
+}
+
+
 h1 {
     color: #1ab0db;
     font-family: "Jersey 25", sans-serif;
@@ -11,7 +66,6 @@ h1 {
     animation-timeline: view();
     animation-fill-mode: forwards;
 }
-
 
 @keyframes load {
     from {opacity: 0;}
@@ -47,18 +101,6 @@ p {
     align-items: center;
 }
 
-#mainSection > div > img {
-    position: absolute;
-    height: 20%;
-    animation-name: fade-in;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes fade-in {
-    from {top: -100px; opacity: 0;}
-    to {top: 150px; opacity: 1;}
-}
 
 section {
     position: relative;
@@ -134,21 +176,6 @@ input[type="checkbox"]:checked + label + .content {
 
 input[type="checkbox"]:checked + label::after {
     content: "\268A";
-}
-
-.RightSideImage {
-    position: absolute;
-    width: 160px;
-    right: -170px;
-    top: -5%;
-    animation-name: slide-in;
-    animation-timeline: view();
-    animation-fill-mode: forwards;
-}
-
-@keyframes slide-in {
-    from {right: -100px; opacity: 0; transform: rotate(0deg);}
-    to {right: 150px; opacity: 1; transform: rotate(360deg)}
 }
 
 
